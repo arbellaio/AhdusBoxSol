@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "98610277233",
+    "project_id": "boxapp-87e47",
+    "storage_bucket": "boxapp-87e47.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:98610277233:android:9a5c81f287b074f1dc64d0",
+        "android_client_info": {
+          "package_name": "com.boxapp.pulseascent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "98610277233-54hjkskpqsm9l108fheir7jh7hgs63vb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3royY6BTHzNxIHJJ1cFY3JuyOYNsNVYs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "98610277233-54hjkskpqsm9l108fheir7jh7hgs63vb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

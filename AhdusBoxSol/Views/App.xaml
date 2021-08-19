@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<baseApp:BaseApp xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:baseApp="clr-namespace:PulseXLibraries.Views.BaseApp;assembly=PulseXLibraries"
+             x:Class="AhdusBoxSol.Views.App">
+   
+</baseApp:BaseApp>

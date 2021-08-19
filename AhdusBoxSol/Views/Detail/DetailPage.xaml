@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<base:BasePage xmlns="http://xamarin.com/schemas/2014/forms"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:base="clr-namespace:PulseXLibraries.Views.Base;assembly=PulseXLibraries"
+               xmlns:entryField="clr-namespace:PulseXLibraries.Controls.EntryField;assembly=PulseXLibraries"
+               xmlns:detail="clr-namespace:AhdusBoxSol.ViewModels.Detail;assembly=AhdusBoxSol"
+               x:Class="AhdusBoxSol.Views.Detail.DetailPage">
+    <ContentPage.BindingContext>
+        <detail:DetailViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout Margin="10,10,10,10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <Label TextColor="CornflowerBlue" Text="Box Details"/>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <entryField:EntryField Text="{Binding SelectedBox.Item.Title}" Visual="BorderlessEntry"
+                                   BorderColor="CornflowerBlue"  Placeholder="Title" />
+            <entryField:EntryField Text="{Binding SelectedBox.Item.Description}" Placeholder="Detail" Visual="BorderlessEntry"
+                                   BorderColor="CornflowerBlue" />
+        </StackLayout>
+        <StackLayout VerticalOptions="EndAndExpand" Margin="0,10,0,20">
+            <Button Text="Select Image" Command="{Binding SelectFileCommand}" CornerRadius="5" BackgroundColor="CornflowerBlue" TextColor="White"  FontFamily="OxygenRegular" />
+            <Button Text="Save" Command="{Binding SaveBoxCommand}" CornerRadius="5" BackgroundColor="CornflowerBlue" TextColor="White" FontFamily="OxygenRegular" />
+        </StackLayout>
+    </StackLayout>
+</base:BasePage>

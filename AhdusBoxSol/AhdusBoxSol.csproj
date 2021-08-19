@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <DebugType>pdbonly</DebugType>
+        <DebugSymbols>true</DebugSymbols>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="FirebaseAuthentication.net" Version="3.7.2" />
+        <PackageReference Include="FirebaseDatabase.net" Version="4.0.6" />
+        <PackageReference Include="FirebaseStorage.net" Version="1.0.3" />
+        <PackageReference Include="Microsoft.AppCenter" Version="4.3.0" />
+        <PackageReference Include="Microsoft.AppCenter.Analytics" Version="4.3.0" />
+        <PackageReference Include="Microsoft.AppCenter.Crashes" Version="4.3.0" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+        <PackageReference Include="Plugin.GoogleClient" Version="2.1.12" />
+        <PackageReference Include="SkiaSharp" Version="2.80.3" />
+        <PackageReference Include="SkiaSharp.Views.Forms" Version="2.80.3" />
+        <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
+        <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Views\App.xaml.cs">
+        <DependentUpon>App.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="PulseXLibraries.dll" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\PulseXLibraries\PulseXLibraries.csproj" />
+    </ItemGroup>
+</Project>

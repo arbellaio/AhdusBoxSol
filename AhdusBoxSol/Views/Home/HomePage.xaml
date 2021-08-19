@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<base:BasePage xmlns="http://xamarin.com/schemas/2014/forms"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:base="clr-namespace:PulseXLibraries.Views.Base;assembly=PulseXLibraries"
+               xmlns:home="clr-namespace:AhdusBoxSol.ViewModels.Home;assembly=AhdusBoxSol"
+               x:Class="AhdusBoxSol.Views.Home.HomePage" Title="BoxApp" BackgroundColor="White">
+    <ContentPage.BindingContext>
+        <home:HomeViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding AddBoxCommand}" Text="Add" />
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Resources>
+        <Style TargetType="Frame">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal" />
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="White" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+    <CollectionView Margin="10,10,10,10" SelectionMode="Single" SelectionChanged="SelectableItemsView_OnSelectionChanged" ItemsSource="{Binding Boxes}">
+        <CollectionView.ItemsLayout>
+            <GridItemsLayout Orientation="Vertical" HorizontalItemSpacing="5"
+                             VerticalItemSpacing="5"
+                             Span="2" />
+        </CollectionView.ItemsLayout>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Frame BackgroundColor="WhiteSmoke" CornerRadius="20">
+
+                    <StackLayout  Padding="0,50,0,0">
+                        <Image Source="{Binding Object.Item.ImagePath}" HeightRequest="50" WidthRequest="50" />
+
+                        <StackLayout VerticalOptions="EndAndExpand">
+                            <Label Text="{Binding Object.Item.Title}" FontFamily="OxygenRegular" FontSize="16"
+                                   TextColor="Blue" />
+                            <Label Text="{Binding Object.Item.Description}" FontFamily="OxygenRegular" FontSize="12"
+                                   TextColor="CornflowerBlue" />
+                        </StackLayout>
+                    </StackLayout>
+                    
+                </Frame>
+
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+
+</base:BasePage>
